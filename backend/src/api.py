@@ -43,7 +43,7 @@ def after_request(response):
 
 
 @app.route('/drinks')
-def retrieve_drinks(payload):
+def retrieve_drinks():
     drinks = []
     drink_query = Drink.query.order_by(Drink.id).all()
     for drink in drink_query:
